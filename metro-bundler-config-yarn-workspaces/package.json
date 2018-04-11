@@ -1,5 +1,5 @@
 {
-  "name": "metro-bundler-config-yarn-workspaces",
+  "name": "@ubiquity6/metro-bundler-config-yarn-workspaces",
   "version": "1.0.3",
   "description": "Metro bundler config generator for yarn workspaces",
   "main": "index.js",
