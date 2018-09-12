@@ -4,6 +4,18 @@ const path = require('path')
 
 module.exports = function getConfig(from, relPathToModules, options = {}) {
   const workspaces = getWorkspaces(from)
+  const extraPaths =  options.blacklistPaths || [];
+
+  // const blist = workspaces.map(
+  //   workspacePath =>
+  //     `/${workspacePath.replace(
+  //       /\//g,
+  //       '[/\\\\]'
+  //     )}[/\\\\]node_modules[/\\\\]react-native[/\\\\].*/`
+  // ).concat(extraPaths);
+
+  const blist = extraPaths;
+  console.log(`Blacklisting the following additional paths: \n ${blist}`);
 
   const config = {
     extraNodeModules: {
@@ -11,13 +23,7 @@ module.exports = function getConfig(from, relPathToModules, options = {}) {
     },
     getBlacklistRE() {
       return blacklist(
-        workspaces.map(
-          workspacePath =>
-            `/${workspacePath.replace(
-              /\//g,
-              '[/\\\\]'
-            )}[/\\\\]node_modules[/\\\\]react-native[/\\\\].*/`
-        )
+        blist
       )
     },
     getProjectRoots() {
