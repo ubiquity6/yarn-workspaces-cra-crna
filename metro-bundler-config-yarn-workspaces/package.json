@@ -1,6 +1,6 @@
 {
   "name": "@ubiquity6/metro-bundler-config-yarn-workspaces",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Metro bundler config generator for yarn workspaces",
   "main": "index.js",
   "repository": "git@github.com:viewsdx/yarn-workspaces-cra-crna.git",

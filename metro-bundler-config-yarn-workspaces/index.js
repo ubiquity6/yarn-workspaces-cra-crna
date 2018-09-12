@@ -15,7 +15,10 @@ module.exports = function getConfig(from, relPathToModules, options = {}) {
   // ).concat(extraPaths);
 
   const blist = extraPaths;
-  console.log(`Blacklisting the following additional paths: \n ${blist}`);
+  console.log('Blacklisting the following additional paths:');
+  blist.map((pth) => {
+    console.log(`${pth}`);
+  });
 
   const config = {
     extraNodeModules: {
