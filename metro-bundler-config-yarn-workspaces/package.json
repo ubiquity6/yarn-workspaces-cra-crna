@@ -1,6 +1,6 @@
 {
   "name": "@ubiquity6/metro-bundler-config-yarn-workspaces",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Metro bundler config generator for yarn workspaces",
   "main": "index.js",
   "repository": "git@github.com:viewsdx/yarn-workspaces-cra-crna.git",
@@ -8,6 +8,6 @@
   "license": "MIT",
   "dependencies": {
     "get-yarn-workspaces": "^1.0.0",
-    "metro": "^0.43.6"
+    "metro": "^0.45.6"
   }
 }
